@@ -1,0 +1,41 @@
+# Environment
+.env
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Data
+data/raw/
+data/processed/
+
+# Models (too large for git)
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# Training outputs
+outputs/
+checkpoints/
+
+# Conda
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MLflow
+mlruns/
+mlflow.db
+
+# DVC
+.dvc/cache/
