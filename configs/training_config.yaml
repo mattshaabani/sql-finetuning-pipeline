@@ -1,0 +1,36 @@
+# Model settings
+model:
+  base_model: "microsoft/Phi-3-mini-4k-instruct"
+  model_type: "causal_lm"
+  max_length: 512
+
+# Training settings
+training:
+  output_dir: "outputs/sql-finetune"
+  num_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4
+  learning_rate: 2.0e-4
+  warmup_steps: 100
+  logging_steps: 10
+  eval_steps: 100
+  save_steps: 100
+  fp16: false
+  bf16: false
+  dataloader_num_workers: 0
+  remove_unused_columns: false
+
+# Data settings
+data:
+  dataset_name: "spider"
+  train_split: "train"
+  eval_split: "validation"
+  max_train_samples: 1000
+  max_eval_samples: 200
+  test_size: 0.1
+
+# MLflow settings
+mlflow:
+  experiment_name: "sql-generation-finetuning"
+  tracking_uri: "sqlite:///mlflow.db"

@@ -1,0 +1,21 @@
+# Evaluation settings
+evaluation:
+  metrics:
+    - exact_match
+    - execution_accuracy
+    - bleu
+  
+  # SQL execution testing
+  execution:
+    test_database: "data/eval/test.db"
+    timeout_seconds: 10
+  
+  # Thresholds for passing
+  thresholds:
+    exact_match: 0.5
+    execution_accuracy: 0.6
+
+# HuggingFace Hub
+hub:
+  repo_id: "MattShaabani/sql-generation-phi3"
+  private: false

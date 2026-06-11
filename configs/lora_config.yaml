@@ -1,0 +1,19 @@
+# LoRA hyperparameters
+lora:
+  r: 16                    # rank of the update matrices
+  lora_alpha: 32           # scaling factor
+  lora_dropout: 0.1        # dropout probability
+  bias: "none"             # whether to train bias params
+  task_type: "CAUSAL_LM"
+  target_modules:          # which layers to apply LoRA to
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+
+# Quantization settings (for QLoRA)
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "float16"
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
