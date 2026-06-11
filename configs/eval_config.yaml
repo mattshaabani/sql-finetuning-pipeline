@@ -17,5 +17,5 @@ evaluation:
 
 # HuggingFace Hub
 hub:
-  repo_id: "MattShaabani/sql-generation-phi3"
+  repo_id: "mattiinn/sql-generation-phi3"
   private: false

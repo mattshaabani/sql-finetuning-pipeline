@@ -146,7 +146,7 @@ class EnvSettings(BaseSettings):
 
     # HuggingFace
     hf_token:    str = Field(default="")
-    hf_username: str = Field(default="MattShaabani")
+    hf_username: str = Field(default="mattiinn")
 
     # App
     app_env:   str = Field(default="development")
